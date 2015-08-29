@@ -1,0 +1,64 @@
+==========================
+====== INTRODUCTION ======
+==========================
+Thanks to download AnotherTodoList : an application to manage your "to do".
+
+==========================
+====== INSTALLATION ======
+==========================
+[REQUIREMENTS]
+- A web server (Apache, IIS, etc)
+- PHP 4/5
+- MySQL
+
+[STEPS TO INSTALL]
+1. Copy sources from www directory on your webserver.
+2. run sql/creation.sql file. It will create a database and a specified user.
+3. Ok, that's all, let's go to http://localhost/AnotherTodoList to use the application.
+
+[STEPS TO UPDATE]
+Usually, you'll have first to copy sources from www directory to the folder which contains the previous version.
+Then, you'll have to upgrade the database.
+To do so, take a look inside the SQL folder and apply one or more patch(es).
+If you've upgrade from last version, just apply SQL patch labelled in name of the current version.
+If you've upgrade for 2 last version, apply first the patch from n-1 version and then, the current version patch.
+And so on.
+WARNING : For now, some SQL patches will make you lose data.
+A migration script should be made in order to avoid that (somebody's interested ?)
+
+Also, see the release notes file for more details for each version.
+
+==========================
+========= HELP ===========
+==========================
+If you have a problem to install AnotherTodoList, check the FAQ on the AnotherTodoList website (http://sourceforge.net/projects/anothertodolist/).
+You can also browse or post on AnotherTodoList forum to get some help.
+At least, you can email me (see CONTACT).
+
+==========================
+======== CONTACT =========
+==========================
+If you're using AnotherTodoList, I will be happy to have some news from you !
+Also, suggestions, bugreports or another idea will be really appreciate.
+Grégory PAUL : paul.gregory@free.fr (FRANCE/Paris)
+
+==========================
+======== THANKS ==========
+==========================
+I'd like to thanks everybody using AnotherTodoList.
+Thanks to Valérie for the idea and many bugs hunting party.
+Thanks to Fam Fam Fam for its beautiful pictures !
+
+==========================
+======== LICENSE =========
+==========================
+This program is free software; you can redistribute it and/or modify it under
+the terms of the GNU General Public License as published by the Free Software
+Foundation; either version 2, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT
+ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE. 
+See the GNU General Public License for more details : http://www.gnu.org/copyleft/gpl.html
+
+This program contains pictures from www.famfamfam.com - see website for licence details.

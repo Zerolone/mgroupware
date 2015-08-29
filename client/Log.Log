@@ -1,0 +1,9 @@
+2008-08-26 15:16:31|数据库连接成功！
+2008-08-26 15:16:45|数据库连接成功！
+2008-08-26 15:16:45|SELECT Top 10 * FROM [mgw_calendar] WHERE [isdone]=0 ORDER BY [import] DESC , [createtime] ASC
+2008-08-26 15:17:14|数据库连接成功！
+2008-08-26 15:18:41|Ini配置保存成功！
+2008-08-26 15:19:36|数据库连接成功！
+2008-08-26 15:19:36|SELECT Top 10 * FROM [mgw_calendar] WHERE [isdone]=0 ORDER BY [import] DESC , [createtime] ASC
+2008-08-26 15:19:36|数据库连接成功！
+2010-01-04 15:11:07|数据库连接成功！

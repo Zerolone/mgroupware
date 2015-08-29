@@ -1,0 +1,32 @@
+BODY 							{	margin: 0px;	padding: 0px;	BACKGROUND-COLOR: #fdfdfd;	font-size:13px;}
+div 							{	padding: 1px; margin:1px	}
+#toolbar 					{	margin: 0;	text-align: center;	border-bottom: 1px solid black;	background-color: #EEEEFF;}
+#messagebar 			{	border-bottom: 1px solid black;	background-color: #FFFFEE;	text-align: right;}
+DIV.area SPAN			{	text-align: right; display:block; vertical-align:baseline}
+DIV.area H2 			{	TEXT-ALIGN: center; font-size:16px; margin:10px}
+UL 								{	PADDING-LEFT: 15px; 	MARGIN: 10px; 	LIST-STYLE-TYPE: square; 	HEIGHT: 190px;}
+LI 								{	HEIGHT: 18px;	font-size:13px;}
+.area 						{	WIDTH: 48.1%; }
+.areall						{	WIDTH: 97%; height:500px;}
+.top 							{	MARGIN-TOP: 8px}
+.bottom 					{	MARGIN-TOP: 8px}
+.left 						{	FLOAT: left; MARGIN-LEFT: 5px}
+.right						{	FLOAT: right; MARGIN-RIGHT: 5px}
+#first 						{	border: 1px solid #CCCCCC;	background-color: #FFEEEE;}
+#second						{	border: 1px solid #CCCCCC;	background-color: #EEFFEE;}
+#third 						{	border: 1px solid #CCCCCC;	background-color: #FFFFEE;}
+#fourth						{	border: 1px solid #CCCCCC;	background-color: #EEFFFF;}
+#l0 							{	border: 1px solid #CCCCCC;	background-color: #FFEEEE;}
+#l1								{	border: 1px solid #CCCCCC;	background-color: #EEFFEE;}
+#l2 							{	border: 1px solid #CCCCCC;	background-color: #FFFFEE;}
+#l3								{	border: 1px solid #CCCCCC;	background-color: #EEFFFF;}
+
+
+#footer 					{	text-align: center;}
+a:link						{	color:#190552; text-decoration:none	}
+a:active					{	color:#190552; text-decoration:none	}
+a:visited					{	color:#29098A; text-decoration:none	}
+a:hover						{	color:#29098A; text-decoration:underline }
+
+.calendar_show		{	WIDTH: 99%; height:99%}
+.inputbox					{ border-style: solid; border-width: 1px}

@@ -1,0 +1,27 @@
+body {
+	font-family: Garamond, serif;
+}
+
+#help, #messagebar, #footer, #workspaceSelection, span.separator, #save, #trash, #helpMessageContainer {
+	display: none;
+}
+
+ul {
+	list-style-type: square;
+}
+
+li.sublist {
+	margin-left: 1em;
+}
+
+.inactive {
+	display: none;
+}
+
+.active {
+	display: visible;
+}
+
+#areaActions, #itemActions {
+	display: none;
+}

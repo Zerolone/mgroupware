@@ -1,0 +1,76 @@
+2008-05-04
+MGroupware简称MGW
+
+MGroupware计划：
+简单的想法：
+1、共享文档
+2、协同工作
+3、任务指派
+4、个人工作计划
+5、离线使用，在线使用
+
+打算使用的语言
+1、C/S+B/S模式，B为在线使用。C可以离线使用，在线使用
+2、S采用Linux/Windows+Apache+Mysql+PHP，计划是测试，编写的时候使用Windows系统， 正式使用时采用Linux系统。
+3、C采用Windows+Delphi+Access
+4、B为浏览器，采用Windows+IE6
+5、各个软件系统的版本为：
+Windows	： XP SP2
+Apache	： 2.0.55
+Mysql	： 4.11
+PHP	： 5.23
+Delphi	： 7.
+Access	： 2003
+
+制作规划：
+1、个人工作计划， C/S+B/S
+2、工作组，权限
+3、任务指派
+
+技术实现：
+1、个人工作计划安排
+B/S端很好解决
+C端：存在计划任务重复的问题（ID相同）
+既不能使用该方式，考虑采用CLSID方式、或者时间方式，或者比较方式。
+同步问题：不存在的记录，【增加】；存在的记录，看哪个记录最后更新时间大，【大吃小】。
+暂时不涉及附件问题
+
+Client同步方法：
+1、同步TID不为0的记录
+2、获取最大的TID
+3、获取服务端大于最大TID的ID的内容
+4、提交本地增加的记录
+5、同步TID为0的记录。
+
+Server表：mgw_calendar
+编号	项		类型		说明
+0	id		int		编号，是一个唯一的值
+1	userid		int		所属用户编号
+2	title		varchar(200)	计划标题
+3	startime	datetime	开始时间
+4	endtime		datetime	结束时间
+5	content		text		内容
+6	creatime	datetime	创建时间
+7	modifytime	datetime	修改时间
+8	date		datetime	日期
+9	isrepeat	tinyint		是否重复
+10	repeatmode	tinyint		重复方式
+11	import		tinyint		关键度
+12	isdone		tinyint		是否完成
+
+Client表：mgw_calendar
+编号	项		类型		说明
+0	id				编号，是一个唯一的值
+1	userid		int		所属用户编号
+2	title		varchar(200)	计划标题
+3	startime	datetime	开始时间
+4	endtime		datetime	结束时间
+5	content		text		内容
+6	creatime	datetime	创建时间
+7	modifytime	datetime	修改时间
+8	date		datetime	日期
+9	isrepeat	tinyint		是否重复
+10	repeatmode	tinyint		重复方式
+11	import		tinyint		关键度
+12	isdone		tinyint		是否完成
+13	sid		int		服务端编号

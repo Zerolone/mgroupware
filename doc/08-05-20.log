@@ -1,0 +1,8 @@
+08-05-20
+
+完善Calendar的Server端的编写， Browser不需要编写， 现在发现有一JS代码，去除Png透明的代码不支持Opera。
+
+
+下一步开始编写Client端， 采用Delphi7+Access方式，当然Server端的接口代码还需要编写。
+
+通过服务端client.php文件，客户端获取该文件生成的参数进行交互。

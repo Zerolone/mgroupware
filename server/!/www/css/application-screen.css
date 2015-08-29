@@ -1,0 +1,219 @@
+body {
+	background-color: #FDFDFD;
+}
+
+div {
+	padding: 0.1em;
+	margin: 0.1em;
+}
+
+div.area h2 {
+	text-align: center;
+}
+
+div.area h2.active {
+	display: visible;
+}
+
+div.area h2.inactive {
+	display: none;
+}
+
+p {
+	margin: 0.25em;
+	padding: 0;
+}
+
+#toolbar {
+	width: 100%;
+	padding: 0.2em 0 0.4em 0;
+	margin: 0;
+	text-align: center;
+	border-bottom: 1px solid black;
+	background-color: #EEEEFF;
+}
+
+input#workspace {
+	background-color: #CCCCCC;
+}
+
+#messagebar {
+	width: 100%;
+	padding: 0.2em 0 0.2em 0;
+	margin: 0;
+	border-bottom: 1px solid black;
+	background-color: #FFFFEE;
+	text-align: center;
+}
+
+#messagebar img {
+	margin-right: 0.2em;
+}
+
+.info {
+	color: green;
+}
+
+.error {
+	color: red;
+}
+
+.warning {
+	color: #CC3300;
+}
+
+a.action {
+	text-decoration: none;
+	padding: 0.1em;
+}
+
+a.action.disabled {
+	color: grey;
+	text-decoration: line-through;
+}
+
+.perso {
+	color: #550000;
+}
+
+.pro {
+	color: #000055;
+}
+
+.select.perso.active {
+	background-color: #FFCCCC;
+	border: 1px solid black;
+}
+
+.select.pro.active {
+	background-color: #EEFFFF;
+	border: 1px solid black;
+}
+
+.action.inactive {
+	background: none;
+	border: none;
+}
+
+ul {
+	padding: 0.1em 0 0.1em 1em;
+	margin: 1em;
+	height: 20em;
+	list-style-type: square;
+	overflow: auto;
+}
+
+h2, li { 
+	min-height: 20px; // Because icons height is 16 pixel.
+}
+
+li.inactive {
+	display: none;
+}
+
+li.active {
+	display: visible;
+	cursor: move;
+}
+
+li.sublist {
+	margin-left: 1em;
+}
+
+.area {
+	width: 48%;
+	padding: 0.1em;
+	margin: 0;
+}
+
+.top {
+	margin-top: 1%;
+}
+
+.bottom {
+	margin-top: 1%;
+}
+
+.bottom .left {
+	clear: both;
+}
+
+.left {
+	margin-left: 1%;
+	float: left;
+}
+
+.right {
+	margin-right: 1%;
+	float: right;
+}
+
+#first {
+	border: 1px solid #CCCCCC;
+	background-color: #FFEEEE;
+}
+#second {
+	border: 1px solid #CCCCCC;
+	background-color: #EEFFEE;
+}
+#third {
+	border: 1px solid #CCCCCC;
+	background-color: #FFFFEE;
+}
+#fourth {
+	border: 1px solid #CCCCCC;
+	background-color: #EEFFFF;
+}
+
+#helpMessageContainer {
+	display: none;
+}
+
+#helpMessage, #helpMessage h2 {
+	text-align: left;	
+}
+
+#helpMessage tt {
+	font-size: 1.25em;
+}
+
+#helpMessage span.highlight {
+	background-color: #FFFFBB;s
+	border: 1px solid orange;
+}
+
+.date {
+	position: absolute;
+	right: 1em;
+	color: grey;
+	font-size: small;
+}
+
+textarea.editable {
+	width: 90%;
+	height: 1.2em;
+	border: 1px solid black;
+	background-color: #FFFFDD;
+	color: black;
+	margin: 0;
+	padding: 0;
+}
+
+textarea.editable.H2 {
+	width: 85%;
+	font-size: 1.2em;
+	text-align: center;
+}
+
+#areaActions, #areaActions a, #areaActions a img, 
+#itemActions, #itemActions a, #itemActions a img,
+#editActions, #editActions a, #editActions a img {
+	margin: 0;
+	padding: 0;
+}
+
+#areaActions {
+	position: absolute;
+	text-align: right;
+	width: 48%;
+}

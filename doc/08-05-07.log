@@ -1,0 +1,24 @@
+08-05-07
+
+Web端添加一个【工作计划安排】。
+显示按优先级倒序、日期顺序
+
+添加，修改， 删除，显示功能完成，接下来应该完成的是完全显示，完全显示可以显示所有的计划，选择显示已经完成的和尚未完成的。和已经删除的，未彻底删除的。
+
+calendar表添加了2个字段， 现在为
+Server表：mgw_calendar
+编号	项		类型		说明
+0	id		int		编号，是一个唯一的值
+1	userid		int		所属用户编号
+2	title		varchar(200)	计划标题
+3	startime	datetime	开始时间
+4	endtime		datetime	结束时间
+5	content		text		内容
+6	creatime	datetime	创建时间
+7	modifytime	datetime	修改时间
+8	date		datetime	日期
+9	isrepeat	tinyint		是否重复
+10	repeatmode	tinyint		重复方式
+11	import 		tinyint(1)  	关键度1-5
+12	isdone 		tinyint(1)	是否完成
+

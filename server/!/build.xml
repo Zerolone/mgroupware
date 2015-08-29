@@ -1,0 +1,72 @@
+<project name="AnotherTodoList" default="package" basedir=".">
+
+    <description>Ant file to package AnotherTodoList</description>
+
+	<tstamp/>
+
+	<property name="version"		value="1.0.0-RC4"/>
+	<property name="date"			value="${DSTAMP}"/>
+	<property name="deploy"			location="deploy"/>
+	<property name="projectName"	value="AnotherTodoList"/>
+
+	<target name="package" depends="clean,zip,targz,export" description="generate the distribution" />
+
+	<target name="clean" description="clean up" >
+		<delete dir="${deploy}"/>
+	</target>
+
+	<target name="export" description="export the project">
+		<copy todir="${deploy}/${projectName}">
+			<fileset dir="." casesensitive="yes">
+			  <include name="**"/>
+			  <exclude name=".*"/>
+			  <exclude name="package.xml"/>
+			  <exclude name="deploy/**"/>
+			  <exclude name="deploy/*"/>
+			</fileset>
+		</copy>
+		<replace file="${deploy}/${projectName}/www/footer.inc.php" token="@VERSION@" value="${version}" />
+		<replace file="${deploy}/${projectName}/www/footer.inc.php" token="@DATE@" value="${date}" />
+	</target>
+
+	<target name="zip" description="generate a package in zip format" depends="export">
+		<zip destfile="${deploy}/${projectName}-${date}-${version}.zip" >
+			<fileset dir="${deploy}/${projectName}" casesensitive="yes">
+			  <include name="**"/>
+			  <exclude name=".*"/>
+			</fileset>
+		</zip>
+	</target>
+
+	<target name="targz" description="generate a package in tar.gz format" depends="export">
+		<tar tarfile="${deploy}/${projectName}-${date}-${version}.tar">
+			<tarfileset dir="${deploy}/${projectName}" casesensitive="yes">
+			  <include name="**"/>
+			  <exclude name=".*"/>
+			</tarfileset>
+		</tar>
+		<gzip zipfile="${deploy}/${projectName}-${date}-${version}.tar.gz" src="${deploy}/${projectName}-${date}-${version}.tar"/>
+	</target>
+	
+	<target name="deploy-website" description="deploy the application on source forge web server" depends="clean,export">
+		<!-- Change the demo mode to true !-->
+		<replace file="${deploy}/${projectName}/www/php/properties.inc.php" token="false" value="true" />
+
+		<!-- Ask for user password -->
+		<input message="Enter your sourceforge password:" addproperty="sf.password" />
+		<scp todir="paul-gregory:${sf.password}@shell.sourceforge.net:/home/groups/a/an/anothertodolist/htdocs">
+			<fileset dir="${deploy}/${projectName}/www/"/>
+		</scp><include name="**/*.html"/>
+	</target>
+
+	<target name="deploy-packages" description="deploy the application on source forge web server" depends="clean,zip,targz">
+		<ftp server="upload.sourceforge.net" remotedir="/incoming" userid="anonymous" password="paul.gregory@free.fr">
+			<fileset dir="${deploy}">
+				<include name="*.zip"/>
+				<include name="*.tar.gz"/>
+			</fileset>
+		</ftp>
+	</target>
+
+</project>
+

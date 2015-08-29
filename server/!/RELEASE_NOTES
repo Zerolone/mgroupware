@@ -1,0 +1,59 @@
+============================================
+== [2008-04-05] Initial version 1.0.0-RC4  =
+============================================
+Copy sources from www directory to the folder which contains the previous version.
+Then, apply the SQL patch called patch-for-version-1 .0.0-RC4.sql.
+WARNING : For now, that SQL patch will make you lose data.
+A migration script should be made in order to avoid that (somebody's interested ?)
+
+============================================
+== [2008-04-02] Initial version 1.0.0-RC3  =
+============================================
+Just copy sources from www directory to the folder which contains the previous version.
+
+============================================
+== [2008-04-01] Initial version 1.0.0-RC2  =
+============================================
+Copy sources from www directory to the folder which contains the previous version.
+Then, apply the SQL patch called patch-for-version-1 .0.0-RC4.sql.
+WARNING : For now, that SQL patch will make you lose data.
+A migration script should be made in order to avoid that (somebody's interested ?)
+
+============================================
+== [2008-03-25] Initial version 1.0.0-RC1  =
+============================================
+Copy sources from www directory to the folder which contains the previous version.
+Then, apply the SQL patch called patch-for-version-1 .0.0-RC4.sql.
+WARNING : For now, that SQL patch will make you lose data.
+A migration script should be made in order to avoid that (somebody's interested ?)
+
+============================================
+== [2007-09-10] Initial beta version 0.1.5 =
+============================================
+Just copy sources from www directory to the folder which contains the previous version.
+
+============================================
+== [2007-09-09] Initial beta version 0.1.4 =
+============================================
+Just copy sources from www directory to the folder which contains the previous version.
+
+===========================================
+== [2007-09-03] Initial beta version 0.1.3 =
+============================================
+Just copy sources from www directory to the folder which contains the previous version.
+
+============================================
+== [2007-09-02] Initial beta version 0.1.2 =
+============================================
+Just copy sources from www directory to the folder which contains the previous version.
+
+============================================
+== [2007-08-26] Initial beta version 0.1.1 =
+============================================
+Just copy sources from www directory to the folder which contains the previous version.
+
+============================================
+== [2007-08-23] Initial beta version 0.1.0 =
+============================================
+Copy sources from www directory to the folder which contains the previous version and execute creation.sql file to create the database.
+
